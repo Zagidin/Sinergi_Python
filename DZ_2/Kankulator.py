@@ -5,3 +5,5 @@ if operation == '+':
     print('Ваш результат:', num1 + num2)
 elif operation == '-':
     print('Ваш результат:', num1 - num2)
+else:
+    print('Вы ввели что-то неправильно!')
