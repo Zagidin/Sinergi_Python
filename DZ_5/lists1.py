@@ -1,6 +1,12 @@
-spisok = ['Zaga', 16, True, 2007, 'Dagestan', 2000, 'Дербент', 17.08, 'Белиджи', False]
+spisok_1 = ['Zaga', 16, True, 2007, 'Dagestan', 2000, 'Дербент', 17.08, 'Белиджи', False]
 
-print(f'{spisok[1:6]}\n{spisok[7:11]}')
+# Выводим список полностью и 5 элеметов и 3 конечные элементы
+print(f'{spisok_1}\n{spisok_1[1:6]}\n{spisok_1[-3::]}')
 
-spisok[3] = False
-print(spisok)
+# Выводим каждый второй элемент списка
+result = spisok_1[1::2]
+print(result)
+
+# Замена третьего элемента списка
+spisok_1[2] = False
+print(spisok_1)
