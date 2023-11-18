@@ -14,5 +14,5 @@ elif cycles2 < 0:
         contener -= 1
         print(contener, end=' | ')
 
-# Это чтоб перейти на новую строку
+# Это чтоб перейти на новую строку.
 print()
