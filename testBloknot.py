@@ -61,6 +61,6 @@ spisok = [
 ]
 # print(f'{spisok}\n{spisok[0].append(list())}\n{spisok[0][3].append(0)}\n{spisok}')
 
-res1 = spisok[0][0]
-res2 = spisok[0][1]
-print(res1 + res2)
+# res1 = spisok[0][0]
+# res2 = spisok[0][1]
+# print(res1 + res2)
