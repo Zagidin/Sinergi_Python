@@ -53,14 +53,45 @@
 # a.append('age')
 # print(a)
 
-spisok = [
-    [1, 1, 4],
-    [4, 5, 6],
-    [7, 8, 9],
-    [10, 11, 12]
-]
+# spisok = [
+#     [1, 1, 4],
+#     [4, 5, 6],
+#     [7, 8, 9],
+#     [10, 11, 12]
+# ]
 # print(f'{spisok}\n{spisok[0].append(list())}\n{spisok[0][3].append(0)}\n{spisok}')
 
 # res1 = spisok[0][0]
 # res2 = spisok[0][1]
 # print(res1 + res2)
+
+# spisok = [
+#     1, 2, 3, 5
+# ]
+
+# spisok.insert(3, 4)
+# print(spisok)
+
+# a = [1, 0, 3, 0]
+# a.append(5)
+# print(*a)
+# print(*a, sep='/')
+# a.pop()
+# print(*a)
+# a.reverse()
+# print(*a)
+
+n = int(input('Введите количество значений в списке: '))
+
+spisok = list()
+contenner = 0
+
+for i in range(n):
+    spisok_znachenie = int(input('Введите значения списка: '))
+    spisok.append(spisok_znachenie)
+    contenner += spisok_znachenie
+    
+print("Ваш список:", *spisok)
+print(contenner)
+
+
