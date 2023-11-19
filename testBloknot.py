@@ -81,17 +81,88 @@
 # a.reverse()
 # print(*a)
 
-n = int(input('Введите количество значений в списке: '))
+# n = int(input('Введите количество значений в списке: '))
 
-spisok = list()
-contenner = 0
+# spisok = [True, 'da']
+# # contenner = 0
+# # 
+# # for i in range(n):
+#     # spisok_znachenie = int(input('Введите значения списка: '))
+#     # spisok.append(spisok_znachenie)
+#     # contenner += spisok_znachenie
+#     # 
+# print("Ваш список:", *spisok)
+# # print(contenner)
 
-for i in range(n):
-    spisok_znachenie = int(input('Введите значения списка: '))
-    spisok.append(spisok_znachenie)
-    contenner += spisok_znachenie
+# print([list(map(int, input().split('\n'))) for _ in range(4)])
+# print([list(map(int, input().split('\n'))) for _ in range(4)])
+
+
+# ------------------------------------КУРС по Stepik -------------------------------------------------------------------
+
+# n = int(input())
+# contenner = 1
+
+# for i in range(1, n+1):
+#     contenner *= i
+
+# print(contenner)
+# ------------------------------------------------------------
+# print(__import__('math').factorial(int(input())))
+
+# numbers = [int(input()) for _ in range(10)]
+
+# composition = 1
+# for num in numbers:
+#     if num != 0:
+#         composition *= num
+
+# print(composition)
+# -----------------------------------------------------------------
+
+# n = int(input())
+
+# counter = 0
+# for i in range(1, n+1):
+#     if n % i == 0:
+#         counter += i
+        
+# print(counter)
+# ---------------------------------------------------------------------
+
+# n = int(input())
+
+# counter = 0
+# for i in range(1, n):
+#     res = ((-1)**(i + 1 )) * i
+#     print(res)
+
+# -------------------Знака чередование---------------------------
+
+# n = int(input())
+
+# counter = 0
+# for i in range(n):
+#     if i % 2 == 0:
+#         counter += i + 1
+#     else:
+#         counter -= i + 1
     
-print("Ваш список:", *spisok)
-print(contenner)
+# print(counter)
 
+# ---------------------------------------------------------
+n = int(input())
 
+counter = ''
+for i in range(n):
+    n = input()
+    counter += n + ' '
+
+spisok1 = counter.split(' ') # ['1', '2', '3', '']
+
+spisok1.pop() # ['1', '2', '3']
+
+spisok_num = list(map(int, spisok1)) # [1, 2, 3]
+print(max(spisok_num))
+spisok_num.remove(max(spisok_num)) # [1, 2]
+print(max(spisok_num))
