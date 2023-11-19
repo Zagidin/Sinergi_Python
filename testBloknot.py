@@ -54,9 +54,13 @@
 # print(a)
 
 spisok = [
-    [1, 2, 3],
+    [1, 1, 4],
     [4, 5, 6],
     [7, 8, 9],
     [10, 11, 12]
 ]
-print(f'{spisok}\n{spisok[0].append(list())}\n{spisok[0][3].append(0)}\n{spisok}')
+# print(f'{spisok}\n{spisok[0].append(list())}\n{spisok[0][3].append(0)}\n{spisok}')
+
+res1 = spisok[0][0]
+res2 = spisok[0][1]
+print(res1 + res2)
