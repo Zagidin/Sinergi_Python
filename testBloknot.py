@@ -151,18 +151,28 @@
 # print(counter)
 
 # ---------------------------------------------------------
+# n = int(input())
+
+# counter = ''
+# for i in range(n):
+#     n = input()
+#     counter += n + ' '
+
+# spisok1 = counter.split(' ') # ['1', '2', '3', '']
+
+# spisok1.pop() # ['1', '2', '3']
+
+# spisok_num = list(map(int, spisok1)) # [1, 2, 3]
+# print(max(spisok_num))
+# spisok_num.remove(max(spisok_num)) # [1, 2]
+# print(max(spisok_num))
+
+from math import * 
+
 n = int(input())
 
-counter = ''
-for i in range(n):
-    n = input()
-    counter += n + ' '
+counter = 1
+for i in range(1, n+1):
+    Xn = i + counter
 
-spisok1 = counter.split(' ') # ['1', '2', '3', '']
-
-spisok1.pop() # ['1', '2', '3']
-
-spisok_num = list(map(int, spisok1)) # [1, 2, 3]
-print(max(spisok_num))
-spisok_num.remove(max(spisok_num)) # [1, 2]
-print(max(spisok_num))
+print(int(counter))
