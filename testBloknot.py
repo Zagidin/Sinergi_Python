@@ -167,12 +167,17 @@
 # spisok_num.remove(max(spisok_num)) # [1, 2]
 # print(max(spisok_num))
 
-from math import * 
+# from math import * 
 
-n = int(input())
+# n = int(input())
 
-counter = 1
-for i in range(1, n+1):
-    Xn = i + counter
+# counter = 1
+# for i in range(1, n+1):
+#     Xn = i + counter
 
-print(int(counter))
+# print(int(counter))
+
+set1, set2 = [1, 2, 3, 5], [2, 5, 1, 4]
+
+intersection_set = set(set1) & set(set2)
+print(intersection_set)
