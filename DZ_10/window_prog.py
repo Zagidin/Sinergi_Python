@@ -15,8 +15,8 @@ definitions = {
 # Создаём функцию с рандомным выводом и удалением
 def show_random_definition():
     random_keys = random.choice(list(definitions.keys())) # Выводим рандомное значение, не определение
-    text_polzovatel.delete('1.0', END) # Очистка
-    text_polzovatel.insert('1.0', definitions[random_keys]) # 
+    text_polzovatel.delete('0.0', END) # Очистка
+    text_polzovatel.insert('0.0', definitions[random_keys]) # 
     
 
 
@@ -28,11 +28,11 @@ root.geometry("400x300") # Задаём размеры для окна
 # Создаём поле для ввода
 # entry = Entry(root, height=10)
 text_polzovatel = Text(root, height=3, width=50)
-text_polzovatel.pack()
+text_polzovatel.pack(pady=30)
 
 # Создаём кнопку для "Показать определение"
 bt1 = Button(root, text="Показать определение", command=show_random_definition)
-bt1.pack() # Запускаем кнопку
+bt1.pack(pady=3) # Запускаем кнопку
 
 # Запускаем окно
 root.mainloop()
