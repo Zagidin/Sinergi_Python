@@ -183,35 +183,70 @@
 # print(intersection_set)
 
 # -----------------------------------Банк создание или пополнение------------------------------------------------
-while True:
-    bank = dict()
+# while True:
+#     bank = dict()
 
-    n = int(input("Сколько запросов пришло Банку? 2 для создания и внесения!: "))
+#     n = int(input("Сколько запросов пришло Банку? 2 для создания и внесения!: "))
 
-    for i in range(n):
-        req = input("Введите запрос < create / add > : ")
+#     for i in range(n):
+#         req = input("Введите запрос < create / add > : ")
         
-        if req == 'create':
-            k = input("Введите название нового ключа: ")
-            bank[k] = 0
-            print('Успешно создано!')
+#         if req == 'create':
+#             k = input("Введите название нового ключа: ")
+#             bank[k] = 0
+#             print('Успешно создано!')
             
-        if req == 'add':
-            k = input("Введите ключ ячейки для пополнения, если вы его создали недвано, то созданную недавно: ")
-            summa = int(input("Сумма для пополнения --> "))
+#         if req == 'add':
+#             k = input("Введите ключ ячейки для пополнения, если вы его создали недвано, то созданную недавно: ")
+#             summa = int(input("Сумма для пополнения --> "))
             
-            if k not in bank.keys():
-                print("Извините, такой ячейки нет!")
-            else:
-                bank[k] += summa
-        else:
-            print("Извините, что-то пошло не так, попробуйте обновить!")
+#             if k not in bank.keys():
+#                 print("Извините, такой ячейки нет!")
+#             else:
+#                 bank[k] += summa
+#         else:
+#             print("Извините, что-то пошло не так, попробуйте обновить!")
 
-    polzovatel = input("Ваша роль? ")
+#     polzovatel = input("Ваша роль? ")
 
-    if polzovatel == 'Zagidin':
-        print(f'Сегодня добавились: {bank}')
-    else:
-        print("Спсасибо за доверие)")
+#     if polzovatel == 'Zagidin':
+#         print(f'Сегодня добавились: {bank}')
+#     else:
+#         print("Спсасибо за доверие)")
         
 #----------------------------------------------------------------------------------------------------------------------
+
+from tkinter import *
+
+
+def no_bt2(event):
+    run = 15
+    new_x = event.x + run
+    new_y = event.y + new_x
+    bt2.place(y=new_x, x=new_y)
+
+
+def Otvet():
+    new_window = Toplevel()
+    new_window.title("РКСИ")
+    new_window.geometry("200x50")
+    text_new_window = Label(new_window, text="Мы не сомнивались!", pady=10)
+    text_new_window.pack()
+
+
+root = Tk()
+root.geometry("165x130")
+
+root.title("ОПРОС")
+
+text = Label(root, text="Вы довольны РКСИ?", pady=20)
+text.pack()
+
+bt1 = Button(root, text="ДА", padx=10, pady=5, command=Otvet)
+bt1.pack()
+
+bt2 = Button(root, text="НЕТ", padx=10, pady=5)
+bt2.bind("<Motion>", no_bt2)
+bt2.pack()
+
+root.mainloop()
