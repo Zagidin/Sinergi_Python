@@ -216,37 +216,150 @@
         
 #----------------------------------------------------------------------------------------------------------------------
 
-from tkinter import *
+# from tkinter import *
 
 
-def no_bt2(event):
-    run = 15
-    new_x = event.x + run
-    new_y = event.y + new_x
-    bt2.place(y=new_x, x=new_y)
+# def no_bt2(event):
+#     run = 15
+#     new_x = event.x + run
+#     new_y = event.y + new_x
+#     bt2.place(y=new_x, x=new_y)
 
 
-def Otvet():
-    new_window = Toplevel()
-    new_window.title("РКСИ")
-    new_window.geometry("200x50")
-    text_new_window = Label(new_window, text="Мы не сомнивались!\nСиди дома и отдыхай)", pady=10)
-    text_new_window.pack()
+# def Otvet():
+#     new_window = Toplevel()
+#     new_window.title("РКСИ")
+#     new_window.geometry("200x50")
+#     text_new_window = Label(new_window, text="Мы не сомнивались!\nСиди дома и отдыхай)", pady=10)
+#     text_new_window.pack()
 
 
-root = Tk()
-root.geometry("165x135")
+# root = Tk()
+# root.geometry("165x135")
 
-root.title("ОПРОС")
+# root.title("ОПРОС")
 
-text = Label(root, text="Пойти на 1 пару?", pady=20)
-text.pack()
+# text = Label(root, text="Пойти на 1 пару?", pady=20)
+# text.pack()
 
-bt1 = Button(root, text="ДА", font=("bold", 10), padx=10, pady=5, command=Otvet)
-bt1.pack()
+# bt1 = Button(root, text="ДА", font=("bold", 10), padx=10, pady=5, command=Otvet)
+# bt1.pack()
 
-bt2 = Button(root, text="НЕТ", font=("bold", 10), padx=10, pady=5)
-bt2.bind("<Motion>", no_bt2)
-bt2.pack()
+# bt2 = Button(root, text="НЕТ", font=("bold", 10), padx=10, pady=5)
+# bt2.bind("<Motion>", no_bt2)
+# bt2.pack()
 
-root.mainloop()
+# root.mainloop()
+
+# ----------------------------------------------------------------------------------------------------
+
+# n = int(input())
+
+# F1 = 1
+# F2 = 0
+
+# for i in range(n):
+#     F3 = F1
+#     F1 += F2
+#     F2 = F3
+#     print(F2, end=" ")
+# -------------------------------------------------------------------------------------
+
+# i = 0
+
+# while i < 10:
+#     print('Zagidin')
+#     i += 1
+# --------------------------------------------------------------
+
+# num = int(input())
+# while num != -1:
+#     print('Квадрат вашего числа равен:', num * num)
+#     num = int(input())
+
+# i = 0
+# while i < 101:
+#     print(i)
+#     i += 1
+
+# text = input()
+# total = 0
+# while text != 'stop':
+#     total += int(text)
+#     text = input()
+
+# print('Сумма чисел равна', total)
+
+# i = 5
+# while i <= 11:
+#     print('Python awesome!')
+#     i += 1
+
+# i = 7
+# a = 5
+# while i < 11:
+#     a += i
+#     i += 2
+# print(12 + 9)
+
+# text = input()
+
+# counter = 0
+# while text != 'стоп' and text != 'хватит' and text != 'достаточно':
+#     counter += 1
+#     text = input()
+    
+# print(counter)
+
+# number = int(input())
+
+# counter = ''
+# while number % 7 == 0:
+#     if number % 7 == 0:
+#         counter += str(number) + '\n'
+#     else:
+#         break
+#     number = int(input())
+
+# print(counter)
+
+# number = int(input())
+
+# counter = 0
+# while number >= 0:
+#     counter += number
+#     number = int(input())
+    
+# print(counter)
+
+# number = int(input())
+
+# counter = 0
+
+# while number > 0 and number <= 5:
+#     if number == 5:
+#         counter += 1
+#     number = int(input())
+
+# print(counter)
+
+n = int(input())
+
+counter = 0
+while n >= 25:
+    counter += 1
+    n = n - 25
+
+while n >= 10:
+    counter += 1
+    n = n - 10
+
+while n >= 5:
+    counter += 1
+    n = n - 5
+
+while n >= 1:
+    counter += 1
+    n = n - 1
+    
+print(counter)
