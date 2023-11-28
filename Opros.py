@@ -34,9 +34,20 @@
 # root.mainloop()
 
 
-num = int(input())
+# Создаем список
+numbers = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 2]
 
-res = num % 10
+# Создаем словарь для подсчета количества повторяющихся чисел
+count_dict = {}
 
-if res == 0:
-    print(0)
+# Считаем количество повторений каждого числа в списке
+for number in numbers:
+    if number in count_dict:
+        count_dict[number] += 1
+    else:
+        count_dict[number] = 1
+
+# Выводим количество повторяющихся чисел
+for number, count in count_dict.items():
+    if count > 1:
+        print(f"Число {number} повторяется {count} раз(а)")

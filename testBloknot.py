@@ -476,23 +476,85 @@
 
 #---------------------------------------------------------------------------------------------------------
 
+# number = int(input())
+
+# counter = ''
+# while number != 0:
+#     end_num = number % 10
+#     counter += str(end_num) + ' '
+#     number = number // 10
+    
+# counter_num = int(counter.replace(' ', ''))
+
+# counter = counter.split(' ')
+# counter.pop()
+# counter = list(map(int, counter))
+
+# if counter[0] < counter[1] and counter[0] < counter[2] and counter[1] < counter[2]:
+#     print('YES')
+# else:
+#     if len_num == 4:
+
+# def xyu(a):
+#     print(a)
+    
+# xyu('Hello')
+
+# -------------------------------------------------------------------------------------------------------------------
+
+# number = int(input())
+
+# counter = ''
+# while number != 0:
+#     end_num = number % 10
+#     counter += str(end_num) + ' '
+#     number = number // 10
+    
+# number = counter.replace(' ', '')
+
+# counter = counter.split(' ')
+# counter.pop()
+# counter = list(map(int, counter))
+
+# len_count_list = len(counter)
+
+# count_dict = {}
+
+# for num in counter:
+#     if num in count_dict:
+#         count_dict[num] += 1
+#     else:
+#         count_dict[num] = 1
+
+# povtorenie = 0      
+# for num, count in count_dict.items():
+#     if count > 1:
+#         povtorenie += count
+
+# if povtorenie == len_count_list:
+#     print("YES")
+# else:
+#     print("NO")
+#--------------------------------------------------------------------------------------------------------------------
+
 number = int(input())
 
 counter = ''
 while number != 0:
     end_num = number % 10
     counter += str(end_num) + ' '
-    number = number // 10
     
-counter_num = int(counter.replace(' ', ''))
-
+    number //= 10
+    
 counter = counter.split(' ')
 counter.pop()
+
 counter = list(map(int, counter))
 
+proverka = all(counter[i] <= counter[i + 1] for i in range(len(counter) - 1))
 
-
-if counter[-1] < counter[-2] and counter[-1] < counter[-3] and counter[-2] < counter[-3]:
-    print('YES')
+if proverka:
+    print("YES")
 else:
-    print('NO')
+    print("NO")
+    
