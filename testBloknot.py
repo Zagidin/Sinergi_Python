@@ -432,28 +432,67 @@
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
 
+# number = int(input())
+# num = number
+# try:
+    
+#     counter_end_num = ''
+#     while number != 0:
+#         end_num = number % 10
+#         counter_end_num += str(end_num) + ' '
+#         number = number // 10
+
+#     counter_one_end_num = int(counter_end_num.replace(' ', ''))
+#     counter_end_num = counter_end_num.split(' ')
+#     counter_end_num.pop()
+#     counter_end_num = list(map(int, counter_end_num))
+
+#     counter_one_num = ''
+#     while counter_one_end_num != 0:
+#         end_num = counter_one_end_num % 10
+#         counter_one_num += str(end_num) + ' '
+#         counter_one_end_num = counter_one_end_num // 10
+            
+#     counter_one_num = counter_one_num.split(' ')
+#     counter_one_num.pop()
+#     counter_one_num = list(map(int, counter_one_num))
+
+#     counter_one_num = int(counter_one_num[1])
+#     print(counter_one_num)
+# except IndexError:
+#     res = num % 10
+#     if num == 0:
+#         print(0)
+#     else:
+#         print(0)
+# -----------------------------------------------------------------------------
+
+# number = int(input())
+# print(str(number)[1])
+
+#------------------------------------------------------------------------------------------------
+
+# print('YES' if len(set(input())) == 1 else 'NO')
+
+#---------------------------------------------------------------------------------------------------------
+
 number = int(input())
 
-counter_end_num = ''
+counter = ''
 while number != 0:
     end_num = number % 10
-    counter_end_num += str(end_num) + ' '
+    counter += str(end_num) + ' '
     number = number // 10
-
-counter_one_end_num = int(counter_end_num.replace(' ', ''))
-counter_end_num = counter_end_num.split(' ')
-counter_end_num.pop()
-counter_end_num = list(map(int, counter_end_num))
-
-counter_one_num = ''
-while counter_one_end_num != 0:
-    end_num = counter_one_end_num % 10
-    counter_one_num += str(end_num) + ' '
-    counter_one_end_num = counter_one_end_num // 10
     
-counter_one_num = counter_one_num.split(' ')
-counter_one_num.pop()
-counter_one_num = list(map(int, counter_one_num))
+counter_num = int(counter.replace(' ', ''))
 
-counter_one_num = int(counter_one_num[1])
-print(counter_one_num)
+counter = counter.split(' ')
+counter.pop()
+counter = list(map(int, counter))
+
+
+
+if counter[-1] < counter[-2] and counter[-1] < counter[-3] and counter[-2] < counter[-3]:
+    print('YES')
+else:
+    print('NO')
