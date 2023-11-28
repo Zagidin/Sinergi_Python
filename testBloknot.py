@@ -343,23 +343,117 @@
 
 # print(counter)
 
-n = int(input())
+# n = int(input())
 
-counter = 0
-while n >= 25:
-    counter += 1
-    n = n - 25
+# counter = 0
+# while n >= 25:
+#     counter += 1
+#     n = n - 25
 
-while n >= 10:
-    counter += 1
-    n = n - 10
+# while n >= 10:
+#     counter += 1
+#     n = n - 10
 
-while n >= 5:
-    counter += 1
-    n = n - 5
+# while n >= 5:
+#     counter += 1
+#     n = n - 5
 
-while n >= 1:
-    counter += 1
-    n = n - 1
+# while n >= 1:
+#     counter += 1
+#     n = n - 1
     
-print(counter)
+# print(counter)
+
+# num = int(input())
+
+# my_number_counter = ''
+
+# while num != 0:
+#     num_end = num % 10
+#     my_number_counter += str(num_end) + ' '
+#     num = num // 10
+    
+# my_number_counter = my_number_counter.split(' ')
+# my_number_counter.pop()
+# my_number_counter = list(map(int, my_number_counter))
+
+# print(f'Максимальное цифра равна {max(*my_number_counter)}\nМинимальная цифра равна {min(*my_number_counter)}')
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+# number = int(input())
+# number2 = number
+
+# # В список для длины
+# counter_len = ''
+# while number2 != 0:
+#     end_num = number2 % 10
+#     counter_len += str(end_num) + ' '
+#     number2 = number2 // 10
+
+# # Для выведения одного числа 5-й пункт
+# counter_one_end = int(counter_len.replace(' ', ''))
+# counter_one_num = counter_one_end
+
+# # Деление числа по пробелам и переприсваивание переменной длиной
+# counter_len = counter_len.split(' ')
+# counter_len.pop()
+# counter_len = len(counter_len)
+
+# # Находим сумму чисел и умножение
+# counter_summa = 0
+# counter_myltiply = 1
+# while number != 0:
+#     end_num = number % 10
+#     counter_summa += end_num
+#     counter_myltiply *= end_num
+#     number = number // 10
+
+# # Получаю первоначальное число
+# counter_one_end_summ = ''
+# while counter_one_end != 0:
+#     end_num = counter_one_end % 10
+#     counter_one_end_summ += str(end_num) + ' '
+#     counter_one_end = counter_one_end // 10
+
+# # Сумма первого и последнего числа
+# counter_one_end_summ = counter_one_end_summ.split(' ')
+# counter_one_end_summ.pop()
+# counter_one_end_summ = list(map(int, counter_one_end_summ))
+# counter_one_end_summ = counter_one_end_summ[0] + counter_one_end_summ[-1]
+
+# # Среднее арифметическая сумма и делить на количество чисел 
+# counter_average_value = counter_summa / counter_len
+
+# # Вывод первой цифры в числе 5-й пункт
+# counter_one_num = counter_one_num % 10
+
+# print(f'{counter_summa}\n{counter_len}\n{counter_myltiply}\n{counter_average_value}\n{counter_one_num}\n{counter_one_end_summ}')
+
+#---------------------------------------------------------------------------------------------------------------------------------------------
+
+number = int(input())
+
+counter_end_num = ''
+while number != 0:
+    end_num = number % 10
+    counter_end_num += str(end_num) + ' '
+    number = number // 10
+
+counter_one_end_num = int(counter_end_num.replace(' ', ''))
+counter_end_num = counter_end_num.split(' ')
+counter_end_num.pop()
+counter_end_num = list(map(int, counter_end_num))
+
+counter_one_num = ''
+while counter_one_end_num != 0:
+    end_num = counter_one_end_num % 10
+    counter_one_num += str(end_num) + ' '
+    counter_one_end_num = counter_one_end_num // 10
+    
+counter_one_num = counter_one_num.split(' ')
+counter_one_num.pop()
+counter_one_num = list(map(int, counter_one_num))
+
+counter_one_num = int(counter_one_num[1])
+print(counter_one_num)
