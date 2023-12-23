@@ -537,24 +537,86 @@
 #     print("NO")
 #--------------------------------------------------------------------------------------------------------------------
 
-number = int(input())
+# number = int(input())
 
-counter = ''
-while number != 0:
-    end_num = number % 10
-    counter += str(end_num) + ' '
+# counter = ''
+# while number != 0:
+#     end_num = number % 10
+#     counter += str(end_num) + ' '
     
-    number //= 10
+#     number //= 10
     
-counter = counter.split(' ')
-counter.pop()
+# counter = counter.split(' ')
+# counter.pop()
 
-counter = list(map(int, counter))
+# counter = list(map(int, counter))
 
-proverka = all(counter[i] <= counter[i + 1] for i in range(len(counter) - 1))
+# proverka = all(counter[i] <= counter[i + 1] for i in range(len(counter) - 1))
 
-if proverka:
+# if proverka:
+#     print("YES")
+# else:
+#     print("NO")
+    
+#-------------------------------------камера-------------------------------------------------
+# import cv2
+
+# cap = cv2.VideoCapture(0)
+# cap.set(3, 100)
+# cap.set(101, 100)
+
+# while True:
+#     success, img = cap.read()
+#     cv2.imshow('Zaga', img)
+    
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
+#-----------------------------------------------------------------------------------------
+
+# type_text = input().lower()
+
+# counter_glassn = 0
+# counter_soglassn = 0
+# for i in range(len(type_text) - 1):
+    
+#     if type_text[i] in 'ауоыиэяюёе':
+#         counter_glassn += 1
+#     elif type_text[i] in 'бвгджзйклмнпрстфхцчшщ':
+#         counter_soglassn += 1
+        
+# print(f'Количество гласных букв равно {counter_glassn}\nКоличество согласных букв равно {counter_soglassn}')
+#---------------------------------------------------------------------------------------------------------
+
+# print(format(int(input()), 'b'))
+
+#-------------------------------------------------------------------------------------------------------------
+
+# print('ZAGAmoshet'[0:4])
+
+# -------------------------------------------------------------------------------------------------------------
+
+# type_text = input()
+
+# len_text = len(type_text) // 2 + len(type_text) % 2
+
+# if len(type_text) % 2 == 0:
+#     print(type_text[len_text:], type_text[len_text])
+# else:
+#     pass
+
+# type_text = input()
+# print("YES" if type_text == type_text.title() else "NO")
+
+# type_text = input()
+# text_good = 'хорош'
+# if text_good in type_text or text_good.swapcase() in type_text or text_good.title() in type_text or text_good.capitalize() in type_text or text_good.upper() in type_text:
+#     print("YES")
+# else:
+#     print("NO")
+
+type_text = input().lower()
+type_text = type_text.lower()
+if 'хорош' in type_text:
     print("YES")
 else:
     print("NO")
-    
